@@ -54,7 +54,7 @@ userRouter.get("/bfhl", (req, res) => {
 });
 //@ts-ignore
 userRouter.post("/annexure", (req, res) => {
-    const { data } = req.body;
+    const { data, filter } = req.body;
     if (!data || !Array.isArray(data)) {
         return res
             .status(400)
